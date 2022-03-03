@@ -34,6 +34,7 @@
     ]
   },
   "dependencies": {
+    "@auth0/auth0-react": "^1.9.0",
     "@garpix/base-api": "^1.2.1",
     "@garpix/fetcher": "^4.0.0",
     "@garpix/garpix-web-components": "^0.14.0",
@@ -46,8 +47,11 @@
     "postcss": "^8.2.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-facebook-login": "^4.1.1",
     "react-helmet-async": "^1.2.3",
     "react-router-dom": "^6.2.1",
+    "react-social-login": "^3.4.15",
+    "react-vk-login-button": "^1.1.0",
     "serialize-javascript": "^6.0.0",
     "storeon": "^3.1.4",
     "yup": "^0.32.11"
@@ -68,6 +72,7 @@
     "babel-preset-razzle": "4.2.13",
     "concurrently": "^6.5.1",
     "cross-env": "^7.0.3",
+    "dotenv": "^16.0.0",
     "html-webpack-plugin": "^4.5.2",
     "husky": "^7.0.4",
     "jest-css-modules-transform": "^4.3.0",

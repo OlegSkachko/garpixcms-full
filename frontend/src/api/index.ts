@@ -56,6 +56,74 @@ class Api extends BaseApi {
       }
     }
   }
+
+  convertTokenVk = async ({vkToken}) => {
+    const res = await this.post(
+        `/social-auth/convert-token/`,
+        {
+            grant_type: 'convert_token',
+            client_id: 'XZuxoKGZ2VdcKAGhGtYAlCJhF0iFxWVGSG1ISEXs',
+            client_secret: 'hv6TrF9TEO8zPrVaBMaeoEmefcvujRP0AxudHUKgrvI6BFacrBZQf8VMatGyDsKThCOSMg7KIzEBF6oeUyuFwiuSjQKGlybYEniw30rPRXzfySiaW2tXBf8sritpEXTu',
+            backend: 'vk-oauth2',
+            token: vkToken,
+        }
+    );
+    console.log('res', res)
+    return {
+        'status': true
+    }
+}
+
+convertTokenFacebook = async ({token}) => {
+    const res = await this.post(
+        `/social-auth/convert-token/`,
+        {
+            grant_type: 'convert_token',
+            client_id: 'iAtAnJYaLYVCr5jJdTN1f0m4YDTBPGvRqx4C5UXC',
+            client_secret: 'eKaXLML5GbG0zipti1VZnUMdStHjYsTdTV1wMGqqQa8bLqZNeiWJGuF0sHjdBsUv3n6Fs9Dk9np67JDQtJiOfyrezGE73mqc2h69NpjurVQUhryUWG0eWl6kIWYfPnI4',
+            backend: 'facebook',
+            token: token,
+        }
+    );
+    console.log('res', res)
+    return {
+        'status': true
+    }
+}
+
+convertTokenGoogle = async ({token}) => {
+    const res = await this.post(
+        `/social-auth/convert-token/`,
+        {
+            grant_type: 'convert_token',
+            client_id: 'iAtAnJYaLYVCr5jJdTN1f0m4YDTBPGvRqx4C5UXC',
+            client_secret: 'eKaXLML5GbG0zipti1VZnUMdStHjYsTdTV1wMGqqQa8bLqZNeiWJGuF0sHjdBsUv3n6Fs9Dk9np67JDQtJiOfyrezGE73mqc2h69NpjurVQUhryUWG0eWl6kIWYfPnI4',
+            backend: 'google-oauth2',
+            token: token,
+        }
+    );
+    console.log('res', res)
+    return {
+        'status': true
+    }
+}
+
+convertTokenApple = async ({token}) => {
+    const res = await this.post(
+        `/social-auth/convert-token/`,
+        {
+            grant_type: 'convert_token',
+            client_id: 'CSDuH8UgHDTFue2GbjZbYJmaRm7VY70QVEFj6A4T',
+            client_secret: 'ic0GJAhwLUF12hvrQugXueplPvvtkkXQS6Yno6fYKiWl7wPE5VNmvvxAWvnBPMIirjtuMds9RQ8oT0U7wSpAqmLrI9fnmX1Ft1NYNW9oybo5ECbAwOZUTEV3b1NZlrRb',
+            backend: 'apple-id',
+            token: token,
+        }
+    );
+    console.log('res', res)
+    return {
+        'status': true
+    }
+}
 }
 
 const api = new Api(`${String(API_URL)}`)
