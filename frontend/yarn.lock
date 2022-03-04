@@ -8402,10 +8402,20 @@ react-social-login@^3.4.15:
     uuid "3.1.0"
     whatwg-fetch "2.0.3"
 
-react-vk-login-button@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-vk-login-button/-/react-vk-login-button-1.1.0.tgz#d810b397d5447a14f17f988760be52bfeb3b03f1"
-  integrity sha512-qiUKM2Gi+RA5cqfkSujP0aobVS6t4TcF2xcQQIn7CvGzwWteIbHEnvMYvRokivPiW07chxVDEEqB8H/zWC9L2A==
+react-vk-login@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/react-vk-login/-/react-vk-login-0.0.2.tgz#1cd74b649a5522aff72d189f9a424e7b8a0f5d77"
+  integrity sha1-HNdLZJpVIq/3LRifmkJOe4oPXXc=
+
+react-vkontakte-login@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/react-vkontakte-login/-/react-vkontakte-login-0.0.4.tgz#bbd0e82ae5e38698bca2302a6cdfb07813cf87d3"
+  integrity sha512-iWzCxqUXmx4/nf4ilyN2tPfr8MCPZgmizDKqTSx1vy0MiHprhx9STdMZgBY86xhhBD8zRdNEojLhfac7nXAS3g==
+
+react-yandex-login@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-yandex-login/-/react-yandex-login-1.0.2.tgz#8640fd14f1acd57690705c03cc2778734f29343d"
+  integrity sha512-/vjEv0X4CK3lcPSsGCBFJfI60lkmZLLLhH1hMSaK/iOVW98insJ0CahTiid732ZCKTlRM8R28pSeNm7ZXup4qg==
 
 react@^16.13.1:
   version "16.14.0"
