@@ -15,7 +15,7 @@ const App = ({ context }: any): React.ReactElement => (
 //     />
 //   </Routes>
 
-<AppleLoginButton>fghfdsdfgh</AppleLoginButton>
+<AppleLoginButton
 )
 
 export default App

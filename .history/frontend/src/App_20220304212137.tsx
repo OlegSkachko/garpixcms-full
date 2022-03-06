@@ -5,7 +5,6 @@ import { PATHS } from './const'
 import './App.css'
 import YandexLoginButton from './apps/components/SocialButtons/YandexLoginButton/YandexLoginButton'
 import VKLoginButton from './apps/components/SocialButtons/VKLoginButton/VKLoginButton'
-import AppleLoginButton from './apps/components/SocialButtons/AppleLoginButton/AppleLoginButton'
 
 const App = ({ context }: any): React.ReactElement => (
 //   <Routes>
@@ -15,7 +14,7 @@ const App = ({ context }: any): React.ReactElement => (
 //     />
 //   </Routes>
 
-<AppleLoginButton>fghfdsdfgh</AppleLoginButton>
+<AppleLoginButton
 )
 
 export default App
