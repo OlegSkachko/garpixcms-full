@@ -14,10 +14,11 @@ const OKLoginButton = (props) => {
             let newWindow = new Promise((res)=>{
                wind= window.open(url, "ok", 'width=600,height=600')
                res(wind)
-            }).then((res:any)=> {
-                let count = 0
-                let checkAuth = setInterval(()=>{
-                try {
+            }).then((result)=> {
+                if(res) {
+                    let count = 0
+                    let checkAuth = setInterval(()=>{
+                        try {
                         count++
                         if(count>2000) {
                             clearInterval(checkAuth)
@@ -30,10 +31,13 @@ const OKLoginButton = (props) => {
                             clearInterval(checkAuth)
                             wind.close()
                         } 
-                    } catch(e) {
-                        throw new DOMException(e)
-                    }
-                },1000)  
+                     
+                        } catch(e) {
+                            throw new DOMException(e)
+                       }
+                    },1000)  
+                }
+               
             })   
         } catch (err) {
             onLoginFailure(err)

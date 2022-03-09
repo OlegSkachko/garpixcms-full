@@ -14,7 +14,7 @@ const OKLoginButton = (props) => {
             let newWindow = new Promise((res)=>{
                wind= window.open(url, "ok", 'width=600,height=600')
                res(wind)
-            }).then((res:any)=> {
+            }).then((res:Promise<LO>)=> {
                 let count = 0
                 let checkAuth = setInterval(()=>{
                 try {

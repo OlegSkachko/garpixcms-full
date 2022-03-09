@@ -1,6 +1,6 @@
 import React from 'react'; 
 
-const OKLoginButton = (props) => {
+const Odnokklasniki = (props) => {
     const {children} = props
     let clientId = '512001382783'
     let scope = 'LONG_ACCESS_TOKEN,VALUABLE_ACCESS'
@@ -12,27 +12,28 @@ const OKLoginButton = (props) => {
         let wind
         try {
             let newWindow = new Promise((res)=>{
-               wind= window.open(url, "ok", 'width=600,height=600')
+               wind= window.open(url, "ok", {width:600,height:600})
                res(wind)
-            }).then((res:any)=> {
+            }).then((res)=> {
                 let count = 0
                 let checkAuth = setInterval(()=>{
-                try {
-                        count++
-                        if(count>2000) {
-                            clearInterval(checkAuth)
-                            wind.close()
-                        }
-                        let hash = res?.location.hash
-                        if(hash !=='' && hash !== undefined ) {
-                            let access_token = hash.replace('#access_token=','').split('&')[0]
-                            console.log(access_token);
-                            clearInterval(checkAuth)
-                            wind.close()
-                        } 
+                    try {
+                    count++
+                    if(count>2000) {
+                        clearInterval(checkAuth)
+                        wind.close()
+                    }
+                    let hash = res.location.hash
+                    if(hash !=='' && hash !== undefined ) {
+                        let access_token = hash.replace('#access_token=','').split('&')[0]
+                        console.log(access_token);
+                        clearInterval(checkAuth)
+                        wind.close()
+                    } 
+                 
                     } catch(e) {
                         throw new DOMException(e)
-                    }
+                   }
                 },1000)  
             })   
         } catch (err) {
@@ -50,4 +51,4 @@ const OKLoginButton = (props) => {
     );
 };
 
-export default OKLoginButton;
+export default Odnokklasniki;

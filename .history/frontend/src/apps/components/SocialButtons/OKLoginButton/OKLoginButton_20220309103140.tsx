@@ -17,7 +17,7 @@ const OKLoginButton = (props) => {
             }).then((res:any)=> {
                 let count = 0
                 let checkAuth = setInterval(()=>{
-                try {
+                    try {
                         count++
                         if(count>2000) {
                             clearInterval(checkAuth)

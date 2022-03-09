@@ -14,25 +14,26 @@ const OKLoginButton = (props) => {
             let newWindow = new Promise((res)=>{
                wind= window.open(url, "ok", 'width=600,height=600')
                res(wind)
-            }).then((res:any)=> {
+            }).then((result)=> {
                 let count = 0
                 let checkAuth = setInterval(()=>{
-                try {
-                        count++
-                        if(count>2000) {
-                            clearInterval(checkAuth)
-                            wind.close()
-                        }
-                        let hash = res?.location.hash
-                        if(hash !=='' && hash !== undefined ) {
-                            let access_token = hash.replace('#access_token=','').split('&')[0]
-                            console.log(access_token);
-                            clearInterval(checkAuth)
-                            wind.close()
-                        } 
+                    try {
+                    count++
+                    if(count>2000) {
+                        clearInterval(checkAuth)
+                        wind.close()
+                    }
+                    let hash = result?.location.hash
+                    if(hash !=='' && hash !== undefined ) {
+                        let access_token = hash.replace('#access_token=','').split('&')[0]
+                        console.log(access_token);
+                        clearInterval(checkAuth)
+                        wind.close()
+                    } 
+                 
                     } catch(e) {
                         throw new DOMException(e)
-                    }
+                   }
                 },1000)  
             })   
         } catch (err) {

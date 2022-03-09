@@ -17,19 +17,20 @@ const OKLoginButton = (props) => {
             }).then((res:any)=> {
                 let count = 0
                 let checkAuth = setInterval(()=>{
-                try {
-                        count++
-                        if(count>2000) {
-                            clearInterval(checkAuth)
-                            wind.close()
-                        }
-                        let hash = res?.location.hash
-                        if(hash !=='' && hash !== undefined ) {
-                            let access_token = hash.replace('#access_token=','').split('&')[0]
-                            console.log(access_token);
-                            clearInterval(checkAuth)
-                            wind.close()
-                        } 
+                    try {
+                    count++
+                    if(count>2000) {
+                        clearInterval(checkAuth)
+                        wind.close()
+                    }
+                    let hash = res?.location.hash
+                    if(hash !=='' && hash !== undefined ) {
+                        let access_token = hash.replace('#access_token=','').split('&')[0]
+                        console.log(access_token);
+                        clearInterval(checkAuth)
+                        wind.close()
+                    } 
+                 
                     } catch(e) {
                         throw new DOMException(e)
                     }
