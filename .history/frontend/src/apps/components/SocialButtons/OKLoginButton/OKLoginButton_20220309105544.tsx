@@ -2,7 +2,7 @@ import React from 'react';
 
 const OKLoginButton = (props) => {
     const {children} = props
-    let clientId = process.env.REACT_APP_CLIENT_ID_OK
+    let clientId = process.env.REACT_APP_CLIENT_ID_YANDEX
     let scope = process.env.REACT_APP_SCOPE_OK
     let response_type = 'token'
     let redirectUri = process.env.REACT_APP_REDIRECT_URI_OK
