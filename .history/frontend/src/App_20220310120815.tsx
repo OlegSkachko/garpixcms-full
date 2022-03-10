@@ -5,12 +5,14 @@ import { PATHS } from './const'
 import './App.css'
 
 const App = ({ context }: any): React.ReactElement => (
-  <Routes>
-    <Route
-      path={PATHS.ALL.path}
-      element={<Combine staticContext={context} {...PATHS.ALL} />}
-    />
-  </Routes>
+//   <Routes>
+//     <Route
+//       path={PATHS.ALL.path}
+//       element={<Combine staticContext={context} {...PATHS.ALL} />}
+//     />
+//   </Routes>
+
+<OK>
 )
 
 export default App

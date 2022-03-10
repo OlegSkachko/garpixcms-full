@@ -6,9 +6,9 @@ import AppleSigninButton from 'react-apple-signin-auth';
 const AppleLoginButton = (props) => {
     const {children} = props
     const authOptions = {
-        clientId: `"${process.env.REACT_APP_CLIENT_ID_APPLE}"`,
+        clientId: `process.env.REACT_APP_CLIENT_ID_APPLE`,
         scope: process.env.REACT_APP_SCOPE_APPLE,
-        redirectURI: `"${process.env.REACT_APP_REDIRECT_URI_APPLE}"`,
+        redirectURI: process.env.REACT_APP_REDIRECT_URI_APPLE,
         state: 'state',
         nonce: 'nonce',
         usePopup:true

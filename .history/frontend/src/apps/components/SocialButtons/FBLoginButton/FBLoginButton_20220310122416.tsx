@@ -19,7 +19,7 @@ const FBLoginButton = ({children}) => {
             <SocialButton
                 provider="facebook"
                 appId={`"${process.env.REACT_APP_APP_ID_FACEBOOK}"`}
-                scope={`"${process.env.REACT_APP_SCOPE_FACEBOOK}"`}
+                scope={`"${process.env.REACT_APP_SCOPE_FACEBOOK}`}
                 onLoginSuccess={handleSocialLogin}
                 onLoginFailure={handleSocialLoginFailure}
             >

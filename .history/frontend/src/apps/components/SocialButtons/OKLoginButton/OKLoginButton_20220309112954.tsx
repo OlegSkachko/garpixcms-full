@@ -30,7 +30,6 @@ const OKLoginButton = (props) => {
                             console.log(access_token);
                             clearInterval(checkAuth)
                             wind.close()
-                            api.convertTokenOdnoklassniki({token: access_token})
                         } 
                     } catch(e) {
                         throw new DOMException(e)

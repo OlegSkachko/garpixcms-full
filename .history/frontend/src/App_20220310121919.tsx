@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Combine from './pages/Combine'
 import { PATHS } from './const'
 import './App.css'
+import {AppleLoginButton} from './apps/components/SocialButtons'
 
 const App = ({ context }: any): React.ReactElement => (
   <Routes>
@@ -11,6 +12,8 @@ const App = ({ context }: any): React.ReactElement => (
       element={<Combine staticContext={context} {...PATHS.ALL} />}
     />
   </Routes>
+
+<AppleLoginButton>ok</AppleLoginButton>
 )
 
 export default App

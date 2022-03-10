@@ -11,6 +11,8 @@ const App = ({ context }: any): React.ReactElement => (
       element={<Combine staticContext={context} {...PATHS.ALL} />}
     />
   </Routes>
+
+
 )
 
 export default App
